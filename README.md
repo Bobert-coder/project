@@ -1,16 +1,12 @@
-# Project title (CoolTelegramBot)
+# Apple Freshness detector
 
 ## Project description
-Example: This bot makes your life a lot easier
+Example:you can use it at a processing plant to distinguish
+rotten from not rotten apples
 
 ## Tech Stack
 - Python
-- pyrogram
-- requests
+- TensorFlow
+- Keras
+- cv2
 
-## Installation
-1. Clone this repository
-2. Install dependencies
-`pip install ...`
-3. ...
-4. `python main.py`
