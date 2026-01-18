@@ -1,12 +1,9 @@
-# Apple Freshness detector
+# Image Generation
 
 ## Project description
-Example:you can use it at a processing plant to distinguish
-rotten from not rotten apples
+Generate images
 
 ## Tech Stack
 - Python
-- TensorFlow
-- Keras
-- cv2
+- 
 
