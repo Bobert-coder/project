@@ -1,7 +1,7 @@
 # Apple Freshness detector
 
 ## Project description
-Example:you can use it at a processing plant to distinguish
+you can use it at a processing plant to distinguish
 rotten from not rotten apples
 
 ## Tech Stack
