@@ -1,6 +1,6 @@
 import sqlite3
 import utils
-from utils import new_user
+
 
 connection = sqlite3.connect('portfolios.db')
 cursor = connection.cursor()
@@ -20,6 +20,6 @@ def create_database():
         """
     )
 
-create_database()
-new_user(123,'Alex')
-new_user(124,'Bob',skills= 'python')
+#create_database()
+#utils.new_user(123,'Alex')
+#utils.new_user(124,'Bob',skills= 'python')
