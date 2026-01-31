@@ -1,13 +1,15 @@
 import sqlite3
 
+import utils
 
 
 connection = sqlite3.connect('portfolios.db')
 cursor = connection.cursor()
+
 def create_database():
-    cursor.execute('DROP TABLE IF EXISTS portfolio')
+    cursor.execute('DROP TABLE IF EXISTS portfolios')
     cursor.execute(
-        """CREATE TABLE portfolio(
+        """CREATE TABLE portfolios(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         uuid TEXT ,
         name TEXT ,
@@ -20,6 +22,6 @@ def create_database():
         """
     )
 
-#create_database()
-#utils.new_user(123,'Alex')
-#utils.new_user(124,'Bob',skills= 'python')
+create_database()
+utils.new_user(123,'Alex')
+utils.new_user(124,'Bob', skills='python')

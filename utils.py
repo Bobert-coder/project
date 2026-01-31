@@ -1,17 +1,28 @@
 import sqlite3
-import init_db
-connection = sqlite3.connect('portfolios.db')
+
+connection = sqlite3.connect(
+    'portfolios.db',
+    check_same_thread = False
+)
+
 cursor = connection.cursor()
-def new_user(uuid=None,name=None,bio=None,github=None,telegram=None,avatar=None,skills=None):
-    cursor.execute("""INSERT INTO portfolio(uuid,name,bio,github,telegram,avatar,skills) VALUES 
-    (?,?,?,?,?,?,?)""",
+cursor.row_factory = sqlite3.Row
+
+def new_user(uuid=None,name=None,
+             bio=None,github=None,
+             telegram=None,avatar=None,
+             skills=None):
+    cursor.execute("""
+    INSERT INTO portfolios
+    (uuid, name, bio, github, telegram, avatar, skills) 
+    VALUES (?,?,?,?,?,?,?)""",
             (uuid, name, bio, github, telegram, avatar, skills))
     connection.commit()
 
-def get_all_profiles():
+def get_all_portfolios():
     cursor.execute('''
-     SELECT * FROM portfolios;
-    '''
-    )
+     SELECT * FROM portfolios
+    ''')
+    portfolios = cursor.fetchall()
+    return [dict(item) for item in portfolios]
 
-print(get_all_profiles())

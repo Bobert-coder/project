@@ -10,16 +10,14 @@
     <div class="all-portfolio-container">
         <h1 class="all-title">Все портфолио</h1>
         <div class="grid">
-            <div class="card">
-                <img src="/static/placeholder.png" alt="Даниил Орлов">
-                <a href="#">Даниил Орлов</a>
-                <p class="bio-preview">Python-разработчик из Москвы. Люблю бэкенд и чат-ботов.</p>
-            </div>
-            <div class="card">
-                <img src="/static/placeholder.png" alt="София Ким">
-                <a href="#">София Ким</a>
-                <p class="bio-preview">Фронтенд-разработчица и дизайнер интерфейсов. React & UX/UI.</p>
-            </div>
+            {% for portfolio in information %}
+                <div class="card">
+                    <img src="url_for('static', filename=portfolio.avatar if portfolio.avatar else 'placeholder.png')
+"                                alt= '{{ portfolio.name }}'>
+                    <a href="#">{{ portfolio.name }}</a>
+                    <p class="bio-preview">{{ portfolio.bio }}</p>
+                </div>
+            {% endfor %}
         </div>
     </div>
 
