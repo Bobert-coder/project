@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def start():
     context = {
-        'information':utils.new_user(123,'Alex')
+        'information':utils.get_all_profiles()
     }
     return render_template("all_portfolios.html",**context)
 
