@@ -4,25 +4,37 @@
     <meta charset="UTF-8">
     <title>Все портфолио</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="all-portfolio-container">
         <h1 class="all-title">Все портфолио</h1>
+
         <div class="grid">
             {% for portfolio in information %}
                 <div class="card">
-                    <img src="url_for('static', filename=portfolio.avatar if portfolio.avatar else 'placeholder.png')
-"                                alt= '{{ portfolio.name }}'>
-                    <a href="#">{{ portfolio.name }}</a>
-                    <p class="bio-preview">{{ portfolio.bio }}</p>
+
+                    <img
+                        src="{{ url_for('static', filename=portfolio.avatar if portfolio.avatar else 'placeholder.png') }}"
+                        alt="{{ portfolio.bio }}"
+                        class="avatar"
+                    >
+
+                    <a href="{{ url_for('portfolio_page', uuid=portfolio.uuid) }}" target="_blank">
+                        {{ portfolio.name }}
+                    </a>
+
+
+
                 </div>
             {% endfor %}
         </div>
     </div>
 
     <div style="text-align: center; margin-top: 40px;">
-        <a href="" class="button-secondary">Создать новое портфолио</a>
+        <a href="{{ url_for('new_portfolio') }}" class="button-secondary">
+            Создать новое портфолио
+        </a>
     </div>
 </body>
 </html>
