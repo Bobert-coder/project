@@ -6,3 +6,5 @@ fluxforge-android/app/build/
 fluxforge-android/local.properties
 *.iml
 .DS_Store
+__pycache__/
+*.pyc
