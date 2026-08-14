@@ -1,0 +1,9 @@
+{
+  "name": "fluxforge",
+  "private": true,
+  "description": "1980s anvil-arcade game for the browser and Google Play",
+  "scripts": {
+    "test": "node tests/test_core.js",
+    "start": "python3 scripts/serve.py"
+  }
+}
