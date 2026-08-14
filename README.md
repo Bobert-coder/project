@@ -1,12 +1,9 @@
-# Apple Freshness detector
+# FLUXFORGE
 
-## Project description
-you can use it at a processing plant to distinguish
-rotten from not rotten apples
+Playable 1980s arcade game for the browser and Google Play.
 
-## Tech Stack
-- Python
-- TensorFlow
-- Keras
-- cv2
+**Start here:** [fluxforge/README.md](fluxforge/README.md)
 
+- Game: `fluxforge/`
+- Play Store packaging: `fluxforge/PLAY_STORE.md`
+- Android Studio wrapper: `fluxforge-android/`

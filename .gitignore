@@ -1,2 +1,8 @@
 .idea/
 portfolios.db
+fluxforge-android/.gradle/
+fluxforge-android/build/
+fluxforge-android/app/build/
+fluxforge-android/local.properties
+*.iml
+.DS_Store
